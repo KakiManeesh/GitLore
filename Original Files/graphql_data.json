@@ -1,0 +1,659 @@
+{
+    "metadata": {
+        "name": "daily-drive",
+        "description": null,
+        "createdAt": "2026-02-24T14:25:36Z",
+        "updatedAt": "2026-06-29T10:26:13Z",
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "url": "https://github.com/KakiManeesh/daily-drive",
+        "primaryLanguage": {
+            "name": "TypeScript"
+        },
+        "licenseInfo": null,
+        "defaultBranchRef": {
+            "name": "main"
+        },
+        "isArchived": false,
+        "isFork": false
+    },
+    "license_name": null,
+    "issues": [
+        {
+            "number": 1,
+            "title": "Test Issue",
+            "body": "Test Description for Issue",
+            "state": "OPEN",
+            "createdAt": "2026-06-29T12:47:13Z",
+            "updatedAt": "2026-06-29T12:47:13Z",
+            "closedAt": null,
+            "author": {
+                "login": "KakiManeesh"
+            },
+            "labels": {
+                "nodes": []
+            },
+            "comments": {
+                "nodes": []
+            }
+        }
+    ],
+    "pull_requests": [],
+    "discussions": [],
+    "releases": [],
+    "commits": [
+        {
+            "oid": "c066b1ac1ff1ace3ad194864ad5f1839de9d4098",
+            "abbreviatedOid": "c066b1a",
+            "message": "chore: add favicon from public/icon.jpeg",
+            "messageHeadline": "chore: add favicon from public/icon.jpeg",
+            "messageBody": "",
+            "authoredDate": "2026-02-24T17:56:34Z",
+            "committedDate": "2026-02-24T17:56:34Z",
+            "author": {
+                "name": "KakiManeesh",
+                "email": "maneeshkaki@gmail.com",
+                "date": "2026-02-24T17:56:34Z",
+                "user": {
+                    "login": "KakiManeesh",
+                    "name": "Kaki Maneesh"
+                }
+            },
+            "committer": {
+                "name": "KakiManeesh",
+                "email": "maneeshkaki@gmail.com",
+                "date": "2026-02-24T17:56:34Z",
+                "user": {
+                    "login": "KakiManeesh",
+                    "name": "Kaki Maneesh"
+                }
+            },
+            "additions": 1,
+            "deletions": 0,
+            "changedFiles": 3,
+            "commitUrl": "https://github.com/KakiManeesh/daily-drive/commit/c066b1ac1ff1ace3ad194864ad5f1839de9d4098",
+            "url": "https://github.com/KakiManeesh/daily-drive/commit/c066b1ac1ff1ace3ad194864ad5f1839de9d4098",
+            "parents": {
+                "nodes": [
+                    {
+                        "oid": "98af875e1ec72770ca073e5baa44f00d34ca2cb2",
+                        "abbreviatedOid": "98af875"
+                    }
+                ]
+            },
+            "tree": {
+                "oid": "e4127f540d683f307427194d5ef52e994834f302"
+            },
+            "status": {
+                "state": "SUCCESS",
+                "contexts": [
+                    {
+                        "context": "Vercel",
+                        "state": "SUCCESS",
+                        "targetUrl": "https://vercel.com/maneeshs-projects-2f80e6ca/daily-drive/75TkZvbdsm6a7wRrEEzP4HMxfUXQ",
+                        "createdAt": "2026-02-24T17:57:00Z",
+                        "creator": {
+                            "login": "vercel"
+                        }
+                    }
+                ]
+            },
+            "statusCheckRollup": {
+                "state": "SUCCESS",
+                "contexts": {
+                    "nodes": [
+                        {
+                            "context": "Vercel",
+                            "state": "SUCCESS",
+                            "targetUrl": "https://vercel.com/maneeshs-projects-2f80e6ca/daily-drive/75TkZvbdsm6a7wRrEEzP4HMxfUXQ",
+                            "createdAt": "2026-02-24T17:57:00Z",
+                            "creator": {
+                                "login": "vercel"
+                            }
+                        }
+                    ]
+                }
+            },
+            "signature": null,
+            "associatedPullRequests": {
+                "nodes": []
+            },
+            "comments": {
+                "pageInfo": {
+                    "hasNextPage": false,
+                    "endCursor": null
+                },
+                "nodes": []
+            }
+        },
+        {
+            "oid": "98af875e1ec72770ca073e5baa44f00d34ca2cb2",
+            "abbreviatedOid": "98af875",
+            "message": "chore: remove Lovable branding and dead StreakTaskConfig type",
+            "messageHeadline": "chore: remove Lovable branding and dead StreakTaskConfig type",
+            "messageBody": "",
+            "authoredDate": "2026-02-24T17:29:59Z",
+            "committedDate": "2026-02-24T17:29:59Z",
+            "author": {
+                "name": "KakiManeesh",
+                "email": "maneeshkaki@gmail.com",
+                "date": "2026-02-24T17:29:59Z",
+                "user": {
+                    "login": "KakiManeesh",
+                    "name": "Kaki Maneesh"
+                }
+            },
+            "committer": {
+                "name": "KakiManeesh",
+                "email": "maneeshkaki@gmail.com",
+                "date": "2026-02-24T17:29:59Z",
+                "user": {
+                    "login": "KakiManeesh",
+                    "name": "Kaki Maneesh"
+                }
+            },
+            "additions": 20,
+            "deletions": 74,
+            "changedFiles": 4,
+            "commitUrl": "https://github.com/KakiManeesh/daily-drive/commit/98af875e1ec72770ca073e5baa44f00d34ca2cb2",
+            "url": "https://github.com/KakiManeesh/daily-drive/commit/98af875e1ec72770ca073e5baa44f00d34ca2cb2",
+            "parents": {
+                "nodes": [
+                    {
+                        "oid": "9dde9952af732ac19bbf02215aeaca3db1fbfd3e",
+                        "abbreviatedOid": "9dde995"
+                    }
+                ]
+            },
+            "tree": {
+                "oid": "93c9776dea8aca860477ce54573629a5d02cd5ec"
+            },
+            "status": {
+                "state": "SUCCESS",
+                "contexts": [
+                    {
+                        "context": "Vercel",
+                        "state": "SUCCESS",
+                        "targetUrl": "https://vercel.com/maneeshs-projects-2f80e6ca/daily-drive/7ahi3VLsXqYSMSzR66d7Xc3rxiVZ",
+                        "createdAt": "2026-02-24T17:30:29Z",
+                        "creator": {
+                            "login": "vercel"
+                        }
+                    }
+                ]
+            },
+            "statusCheckRollup": {
+                "state": "SUCCESS",
+                "contexts": {
+                    "nodes": [
+                        {
+                            "context": "Vercel",
+                            "state": "SUCCESS",
+                            "targetUrl": "https://vercel.com/maneeshs-projects-2f80e6ca/daily-drive/7ahi3VLsXqYSMSzR66d7Xc3rxiVZ",
+                            "createdAt": "2026-02-24T17:30:29Z",
+                            "creator": {
+                                "login": "vercel"
+                            }
+                        }
+                    ]
+                }
+            },
+            "signature": null,
+            "associatedPullRequests": {
+                "nodes": []
+            },
+            "comments": {
+                "pageInfo": {
+                    "hasNextPage": false,
+                    "endCursor": null
+                },
+                "nodes": []
+            }
+        },
+        {
+            "oid": "9dde9952af732ac19bbf02215aeaca3db1fbfd3e",
+            "abbreviatedOid": "9dde995",
+            "message": "remove Lovable branding, remove fallback tasks system",
+            "messageHeadline": "remove Lovable branding, remove fallback tasks system",
+            "messageBody": "",
+            "authoredDate": "2026-02-24T16:55:58Z",
+            "committedDate": "2026-02-24T16:55:58Z",
+            "author": {
+                "name": "KakiManeesh",
+                "email": "maneeshkaki@gmail.com",
+                "date": "2026-02-24T16:55:58Z",
+                "user": {
+                    "login": "KakiManeesh",
+                    "name": "Kaki Maneesh"
+                }
+            },
+            "committer": {
+                "name": "KakiManeesh",
+                "email": "maneeshkaki@gmail.com",
+                "date": "2026-02-24T16:55:58Z",
+                "user": {
+                    "login": "KakiManeesh",
+                    "name": "Kaki Maneesh"
+                }
+            },
+            "additions": 7,
+            "deletions": 46,
+            "changedFiles": 6,
+            "commitUrl": "https://github.com/KakiManeesh/daily-drive/commit/9dde9952af732ac19bbf02215aeaca3db1fbfd3e",
+            "url": "https://github.com/KakiManeesh/daily-drive/commit/9dde9952af732ac19bbf02215aeaca3db1fbfd3e",
+            "parents": {
+                "nodes": [
+                    {
+                        "oid": "c310be501b0f63e0e6e12dc3ba088c79b9c2eea5",
+                        "abbreviatedOid": "c310be5"
+                    }
+                ]
+            },
+            "tree": {
+                "oid": "c2ef0b576cf5d3b957a8b071e7552983cdd9bd28"
+            },
+            "status": {
+                "state": "SUCCESS",
+                "contexts": [
+                    {
+                        "context": "Vercel",
+                        "state": "SUCCESS",
+                        "targetUrl": "https://vercel.com/maneeshs-projects-2f80e6ca/daily-drive/AGdTXDq1Bw65yYisCjSyHRHpWBSn",
+                        "createdAt": "2026-02-24T16:56:23Z",
+                        "creator": {
+                            "login": "vercel"
+                        }
+                    }
+                ]
+            },
+            "statusCheckRollup": {
+                "state": "SUCCESS",
+                "contexts": {
+                    "nodes": [
+                        {
+                            "context": "Vercel",
+                            "state": "SUCCESS",
+                            "targetUrl": "https://vercel.com/maneeshs-projects-2f80e6ca/daily-drive/AGdTXDq1Bw65yYisCjSyHRHpWBSn",
+                            "createdAt": "2026-02-24T16:56:23Z",
+                            "creator": {
+                                "login": "vercel"
+                            }
+                        }
+                    ]
+                }
+            },
+            "signature": null,
+            "associatedPullRequests": {
+                "nodes": []
+            },
+            "comments": {
+                "pageInfo": {
+                    "hasNextPage": false,
+                    "endCursor": null
+                },
+                "nodes": []
+            }
+        },
+        {
+            "oid": "c310be501b0f63e0e6e12dc3ba088c79b9c2eea5",
+            "abbreviatedOid": "c310be5",
+            "message": "working - firebase live sync fixed",
+            "messageHeadline": "working - firebase live sync fixed",
+            "messageBody": "",
+            "authoredDate": "2026-02-24T16:30:21Z",
+            "committedDate": "2026-02-24T16:30:21Z",
+            "author": {
+                "name": "KakiManeesh",
+                "email": "maneeshkaki@gmail.com",
+                "date": "2026-02-24T16:30:21Z",
+                "user": {
+                    "login": "KakiManeesh",
+                    "name": "Kaki Maneesh"
+                }
+            },
+            "committer": {
+                "name": "KakiManeesh",
+                "email": "maneeshkaki@gmail.com",
+                "date": "2026-02-24T16:30:21Z",
+                "user": {
+                    "login": "KakiManeesh",
+                    "name": "Kaki Maneesh"
+                }
+            },
+            "additions": 3399,
+            "deletions": 487,
+            "changedFiles": 16,
+            "commitUrl": "https://github.com/KakiManeesh/daily-drive/commit/c310be501b0f63e0e6e12dc3ba088c79b9c2eea5",
+            "url": "https://github.com/KakiManeesh/daily-drive/commit/c310be501b0f63e0e6e12dc3ba088c79b9c2eea5",
+            "parents": {
+                "nodes": [
+                    {
+                        "oid": "73c64119f8a9e915ff453766a2ecbb046d78901e",
+                        "abbreviatedOid": "73c6411"
+                    }
+                ]
+            },
+            "tree": {
+                "oid": "ba432c0b45dda5e855d46d4bcfcef7e721bc7f51"
+            },
+            "status": {
+                "state": "SUCCESS",
+                "contexts": [
+                    {
+                        "context": "Vercel",
+                        "state": "SUCCESS",
+                        "targetUrl": "https://vercel.com/maneeshs-projects-2f80e6ca/daily-drive/H2MPURqMd9Doh3RwZv5a4S2cz9ka",
+                        "createdAt": "2026-02-24T16:40:40Z",
+                        "creator": {
+                            "login": "vercel"
+                        }
+                    }
+                ]
+            },
+            "statusCheckRollup": {
+                "state": "SUCCESS",
+                "contexts": {
+                    "nodes": [
+                        {
+                            "context": "Vercel",
+                            "state": "SUCCESS",
+                            "targetUrl": "https://vercel.com/maneeshs-projects-2f80e6ca/daily-drive/H2MPURqMd9Doh3RwZv5a4S2cz9ka",
+                            "createdAt": "2026-02-24T16:40:40Z",
+                            "creator": {
+                                "login": "vercel"
+                            }
+                        }
+                    ]
+                }
+            },
+            "signature": null,
+            "associatedPullRequests": {
+                "nodes": []
+            },
+            "comments": {
+                "pageInfo": {
+                    "hasNextPage": false,
+                    "endCursor": null
+                },
+                "nodes": []
+            }
+        },
+        {
+            "oid": "73c64119f8a9e915ff453766a2ecbb046d78901e",
+            "abbreviatedOid": "73c6411",
+            "message": "Add graph-based day edit dialog\n\nAllow viewing and editing of past day entries by clicking a data point on the graph; integrate DayEditDialog, hook updates, and wire up in Index page. Also supports opening an edit dialog for a selected date and saving changes back to state.\n\nX-Lovable-Edit-ID: edt-d5f8fa6f-b06a-4c55-9b5b-a4f6f472618c",
+            "messageHeadline": "Add graph-based day edit dialog",
+            "messageBody": "Allow viewing and editing of past day entries by clicking a data point on the graph; integrate DayEditDialog, hook updates, and wire up in Index page. Also supports opening an edit dialog for a selected date and saving changes back to state.\n\nX-Lovable-Edit-ID: edt-d5f8fa6f-b06a-4c55-9b5b-a4f6f472618c",
+            "authoredDate": "2026-02-24T14:24:15Z",
+            "committedDate": "2026-02-24T14:24:15Z",
+            "author": {
+                "name": "gpt-engineer-app[bot]",
+                "email": "159125892+gpt-engineer-app[bot]@users.noreply.github.com",
+                "date": "2026-02-24T14:24:15Z",
+                "user": {
+                    "login": "lovable-dev[bot]",
+                    "name": null
+                }
+            },
+            "committer": {
+                "name": "gpt-engineer-app[bot]",
+                "email": "159125892+gpt-engineer-app[bot]@users.noreply.github.com",
+                "date": "2026-02-24T14:24:15Z",
+                "user": {
+                    "login": "lovable-dev[bot]",
+                    "name": null
+                }
+            },
+            "additions": 157,
+            "deletions": 4,
+            "changedFiles": 4,
+            "commitUrl": "https://github.com/KakiManeesh/daily-drive/commit/73c64119f8a9e915ff453766a2ecbb046d78901e",
+            "url": "https://github.com/KakiManeesh/daily-drive/commit/73c64119f8a9e915ff453766a2ecbb046d78901e",
+            "parents": {
+                "nodes": [
+                    {
+                        "oid": "ad888813126390a8d4b4c0d3794de0c1eaf65575",
+                        "abbreviatedOid": "ad88881"
+                    },
+                    {
+                        "oid": "c4572be95aac1d3696771c4b81d943f96f904d54",
+                        "abbreviatedOid": "c4572be"
+                    }
+                ]
+            },
+            "tree": {
+                "oid": "4480c651e18f8de19b647fde218f57d0833f0e18"
+            },
+            "status": null,
+            "statusCheckRollup": null,
+            "signature": null,
+            "associatedPullRequests": {
+                "nodes": []
+            },
+            "comments": {
+                "pageInfo": {
+                    "hasNextPage": false,
+                    "endCursor": null
+                },
+                "nodes": []
+            }
+        },
+        {
+            "oid": "c4572be95aac1d3696771c4b81d943f96f904d54",
+            "abbreviatedOid": "c4572be",
+            "message": "Changes",
+            "messageHeadline": "Changes",
+            "messageBody": "",
+            "authoredDate": "2026-02-24T14:24:15Z",
+            "committedDate": "2026-02-24T14:24:15Z",
+            "author": {
+                "name": "gpt-engineer-app[bot]",
+                "email": "159125892+gpt-engineer-app[bot]@users.noreply.github.com",
+                "date": "2026-02-24T14:24:15Z",
+                "user": {
+                    "login": "lovable-dev[bot]",
+                    "name": null
+                }
+            },
+            "committer": {
+                "name": "gpt-engineer-app[bot]",
+                "email": "159125892+gpt-engineer-app[bot]@users.noreply.github.com",
+                "date": "2026-02-24T14:24:15Z",
+                "user": {
+                    "login": "lovable-dev[bot]",
+                    "name": null
+                }
+            },
+            "additions": 157,
+            "deletions": 4,
+            "changedFiles": 4,
+            "commitUrl": "https://github.com/KakiManeesh/daily-drive/commit/c4572be95aac1d3696771c4b81d943f96f904d54",
+            "url": "https://github.com/KakiManeesh/daily-drive/commit/c4572be95aac1d3696771c4b81d943f96f904d54",
+            "parents": {
+                "nodes": [
+                    {
+                        "oid": "ad888813126390a8d4b4c0d3794de0c1eaf65575",
+                        "abbreviatedOid": "ad88881"
+                    }
+                ]
+            },
+            "tree": {
+                "oid": "4480c651e18f8de19b647fde218f57d0833f0e18"
+            },
+            "status": null,
+            "statusCheckRollup": null,
+            "signature": null,
+            "associatedPullRequests": {
+                "nodes": []
+            },
+            "comments": {
+                "pageInfo": {
+                    "hasNextPage": false,
+                    "endCursor": null
+                },
+                "nodes": []
+            }
+        },
+        {
+            "oid": "ad888813126390a8d4b4c0d3794de0c1eaf65575",
+            "abbreviatedOid": "ad88881",
+            "message": "Implemented Achievements & Graph UI\n\nAdded AchievementsPanel, HabitGraph, StreakDisplay, WeeklySummary, and SettingsSheet to support milestone tracking, visualized stock-style progress, and configurable settings. Integrated with habit data layer, updated hooks, and main dashboard wiring.\n\nX-Lovable-Edit-ID: edt-3863fd26-111d-44aa-aca9-cb1ff41fec72",
+            "messageHeadline": "Implemented Achievements & Graph UI",
+            "messageBody": "Added AchievementsPanel, HabitGraph, StreakDisplay, WeeklySummary, and SettingsSheet to support milestone tracking, visualized stock-style progress, and configurable settings. Integrated with habit data layer, updated hooks, and main dashboard wiring.\n\nX-Lovable-Edit-ID: edt-3863fd26-111d-44aa-aca9-cb1ff41fec72",
+            "authoredDate": "2026-02-24T14:16:36Z",
+            "committedDate": "2026-02-24T14:16:36Z",
+            "author": {
+                "name": "gpt-engineer-app[bot]",
+                "email": "159125892+gpt-engineer-app[bot]@users.noreply.github.com",
+                "date": "2026-02-24T14:16:36Z",
+                "user": {
+                    "login": "lovable-dev[bot]",
+                    "name": null
+                }
+            },
+            "committer": {
+                "name": "gpt-engineer-app[bot]",
+                "email": "159125892+gpt-engineer-app[bot]@users.noreply.github.com",
+                "date": "2026-02-24T14:16:36Z",
+                "user": {
+                    "login": "lovable-dev[bot]",
+                    "name": null
+                }
+            },
+            "additions": 1136,
+            "deletions": 93,
+            "changedFiles": 12,
+            "commitUrl": "https://github.com/KakiManeesh/daily-drive/commit/ad888813126390a8d4b4c0d3794de0c1eaf65575",
+            "url": "https://github.com/KakiManeesh/daily-drive/commit/ad888813126390a8d4b4c0d3794de0c1eaf65575",
+            "parents": {
+                "nodes": [
+                    {
+                        "oid": "b331aa1a7d54e9db10920729709d1ff849c8e2ea",
+                        "abbreviatedOid": "b331aa1"
+                    },
+                    {
+                        "oid": "57083487b0ee6ef8e7942825c87183ee2a518830",
+                        "abbreviatedOid": "5708348"
+                    }
+                ]
+            },
+            "tree": {
+                "oid": "d3f1e11c2e54f667dfb50da8ccc837594d36a791"
+            },
+            "status": null,
+            "statusCheckRollup": null,
+            "signature": null,
+            "associatedPullRequests": {
+                "nodes": []
+            },
+            "comments": {
+                "pageInfo": {
+                    "hasNextPage": false,
+                    "endCursor": null
+                },
+                "nodes": []
+            }
+        },
+        {
+            "oid": "57083487b0ee6ef8e7942825c87183ee2a518830",
+            "abbreviatedOid": "5708348",
+            "message": "Changes",
+            "messageHeadline": "Changes",
+            "messageBody": "",
+            "authoredDate": "2026-02-24T14:16:36Z",
+            "committedDate": "2026-02-24T14:16:36Z",
+            "author": {
+                "name": "gpt-engineer-app[bot]",
+                "email": "159125892+gpt-engineer-app[bot]@users.noreply.github.com",
+                "date": "2026-02-24T14:16:36Z",
+                "user": {
+                    "login": "lovable-dev[bot]",
+                    "name": null
+                }
+            },
+            "committer": {
+                "name": "gpt-engineer-app[bot]",
+                "email": "159125892+gpt-engineer-app[bot]@users.noreply.github.com",
+                "date": "2026-02-24T14:16:36Z",
+                "user": {
+                    "login": "lovable-dev[bot]",
+                    "name": null
+                }
+            },
+            "additions": 1136,
+            "deletions": 93,
+            "changedFiles": 12,
+            "commitUrl": "https://github.com/KakiManeesh/daily-drive/commit/57083487b0ee6ef8e7942825c87183ee2a518830",
+            "url": "https://github.com/KakiManeesh/daily-drive/commit/57083487b0ee6ef8e7942825c87183ee2a518830",
+            "parents": {
+                "nodes": [
+                    {
+                        "oid": "b331aa1a7d54e9db10920729709d1ff849c8e2ea",
+                        "abbreviatedOid": "b331aa1"
+                    }
+                ]
+            },
+            "tree": {
+                "oid": "d3f1e11c2e54f667dfb50da8ccc837594d36a791"
+            },
+            "status": null,
+            "statusCheckRollup": null,
+            "signature": null,
+            "associatedPullRequests": {
+                "nodes": []
+            },
+            "comments": {
+                "pageInfo": {
+                    "hasNextPage": false,
+                    "endCursor": null
+                },
+                "nodes": []
+            }
+        },
+        {
+            "oid": "b331aa1a7d54e9db10920729709d1ff849c8e2ea",
+            "abbreviatedOid": "b331aa1",
+            "message": "template: new_style_vite_react_shadcn_ts_testing_2026-01-08",
+            "messageHeadline": "template: new_style_vite_react_shadcn_ts_testing_2026-01-08",
+            "messageBody": "",
+            "authoredDate": "2025-01-01T00:00:00Z",
+            "committedDate": "2025-01-01T00:00:00Z",
+            "author": {
+                "name": "Lovable",
+                "email": "noreply@lovable.dev",
+                "date": "2025-01-01T00:00:00Z",
+                "user": null
+            },
+            "committer": {
+                "name": "Lovable",
+                "email": "noreply@lovable.dev",
+                "date": "2025-01-01T00:00:00Z",
+                "user": null
+            },
+            "additions": 11601,
+            "deletions": 0,
+            "changedFiles": 80,
+            "commitUrl": "https://github.com/KakiManeesh/daily-drive/commit/b331aa1a7d54e9db10920729709d1ff849c8e2ea",
+            "url": "https://github.com/KakiManeesh/daily-drive/commit/b331aa1a7d54e9db10920729709d1ff849c8e2ea",
+            "parents": {
+                "nodes": []
+            },
+            "tree": {
+                "oid": "18b8e3a996c7aac22e3451685fc30226a6a3ad10"
+            },
+            "status": null,
+            "statusCheckRollup": null,
+            "signature": null,
+            "associatedPullRequests": {
+                "nodes": []
+            },
+            "comments": {
+                "pageInfo": {
+                    "hasNextPage": false,
+                    "endCursor": null
+                },
+                "nodes": []
+            }
+        }
+    ]
+}

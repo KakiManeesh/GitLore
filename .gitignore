@@ -1,0 +1,78 @@
+# =====================================================
+# Environment & Secrets
+# =====================================================
+.env
+.env.*
+!.env.example
+
+# =====================================================
+# Python
+# =====================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+build/
+develop-eggs/
+dist/
+downloads/
+.venv/
+venv/
+env/
+ENV/
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+
+# =====================================================
+# Node / Frontend tooling
+# =====================================================
+node_modules/
+.pnpm-store/
+.npm/
+.yarn/
+
+# =====================================================
+# GitLore-specific: generated artifacts
+# =====================================================
+# ChromaDB loader output + GraphQL metadata dumps
+Output/
+graphql_data.json
+repo_dump.txt
+
+# =====================================================
+# IDE / editor / OS
+# =====================================================
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# =====================================================
+# Local Mavis / AI agent caches (NOT part of the project)
+# =====================================================
+.minimax/
+.kilo/
+
+# =====================================================
+# Misc
+# =====================================================
+*.bak
+*.tmp
+*.orig
+*.rej
