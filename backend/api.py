@@ -1,11 +1,11 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from langchain_groq import ChatGroq
 from pydantic import BaseModel
 
 from backend.agent.agent import AgenticRagSystem
 from backend.config import config
 from backend.ingestion.ingestion_manager import IngestionManager
+from backend.llm import create_chat_model
 
 app = FastAPI(title="GitLore API")
 
@@ -51,11 +51,7 @@ async def query_endpoint(req: QueryRequest):
     if not config.GROQ_API_KEY:
         raise HTTPException(status_code=500, detail="GROQ_API_KEY not configured.")
 
-    model = ChatGroq(
-        api_key=config.GROQ_API_KEY,
-        model=config.GROQ_MODEL,
-        temperature=config.GROQ_TEMPERATURE,
-    )
+    model = create_chat_model()
 
     try:
         return AgenticRagSystem(model, req.repository_id).query(req.query)

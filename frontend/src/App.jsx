@@ -1,20 +1,32 @@
 import { useEffect, useState } from 'react';
 
-import AnswerDisplay from './components/AnswerDisplay';
-import QueryInput from './components/QueryInput';
-import RepositoryForm from './components/RepositoryForm';
-import RepositoryList from './components/RepositoryList';
+import ChatInterface from './components/ChatInterface';
+import IndexModal from './components/IndexModal';
+import OnboardingScreen from './components/OnboardingScreen';
 import { fetchRepositories, indexRepository, queryRepository } from './lib/api';
 import './App.css';
 
+function createEntryId() {
+  if (globalThis.crypto?.randomUUID) {
+    return globalThis.crypto.randomUUID();
+  }
+  return `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+}
+
+function replaceThreadEntry(thread, entryId, replacement) {
+  return thread.map((entry) => (entry.id === entryId ? replacement : entry));
+}
+
 function App() {
+  const [phase, setPhase] = useState('onboarding');
   const [repositories, setRepositories] = useState([]);
   const [selectedRepositoryId, setSelectedRepositoryId] = useState('');
-  const [result, setResult] = useState(null);
-  const [error, setError] = useState('');
+  const [thread, setThread] = useState([]);
   const [loadingRepositories, setLoadingRepositories] = useState(true);
   const [indexing, setIndexing] = useState(false);
   const [querying, setQuerying] = useState(false);
+  const [indexError, setIndexError] = useState('');
+  const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     let active = true;
@@ -25,15 +37,21 @@ function App() {
         if (!active) {
           return;
         }
+
         const items = payload.repositories ?? [];
         setRepositories(items);
         if (items.length > 0) {
           setSelectedRepositoryId((current) => current || items[0].repository_id);
+          setPhase('chat');
+        } else {
+          setPhase('onboarding');
         }
       } catch (requestError) {
-        if (active) {
-          setError(requestError.message);
+        if (!active) {
+          return;
         }
+        setIndexError(requestError.message);
+        setPhase('onboarding');
       } finally {
         if (active) {
           setLoadingRepositories(false);
@@ -47,14 +65,9 @@ function App() {
     };
   }, []);
 
-  const selectedRepository = repositories.find(
-    (repository) => repository.repository_id === selectedRepositoryId,
-  );
-
   const handleIndexRepository = async (repositoryUrl) => {
     setIndexing(true);
-    setError('');
-    setResult(null);
+    setIndexError('');
 
     try {
       const manifest = await indexRepository(repositoryUrl);
@@ -65,77 +78,94 @@ function App() {
         return [manifest, ...filtered];
       });
       setSelectedRepositoryId(manifest.repository_id);
+      setPhase('chat');
+      setModalOpen(false);
     } catch (requestError) {
-      setError(requestError.message);
+      setIndexError(requestError.message);
     } finally {
       setIndexing(false);
     }
   };
 
   const handleQuery = async (query) => {
-    if (!selectedRepositoryId) {
-      setError('Select a repository before running a query.');
+    if (!selectedRepositoryId || querying) {
       return;
     }
 
+    const userEntry = { id: createEntryId(), type: 'user', query };
+    const loadingId = createEntryId();
+    const loadingEntry = { id: loadingId, type: 'loading' };
+
+    setThread((current) => [...current, userEntry, loadingEntry]);
     setQuerying(true);
-    setError('');
-    setResult(null);
 
     try {
       const response = await queryRepository(selectedRepositoryId, query);
-      setResult(response);
+      setThread((current) =>
+        replaceThreadEntry(current, loadingId, {
+          id: loadingId,
+          type: 'assistant',
+          result: response,
+        }),
+      );
     } catch (requestError) {
-      setError(requestError.message);
+      setThread((current) =>
+        replaceThreadEntry(current, loadingId, {
+          id: loadingId,
+          type: 'error',
+          message: requestError.message,
+        }),
+      );
     } finally {
       setQuerying(false);
     }
   };
 
+  let content;
+  if (loadingRepositories) {
+    content = (
+      <main className="onboarding-shell">
+        <div className="onboarding-card panel" role="status" aria-busy="true">
+          <div className="loading-block">
+            <div className="loading-line wide" />
+            <div className="loading-line medium" />
+            <div className="loading-box" />
+          </div>
+        </div>
+      </main>
+    );
+  } else if (phase === 'chat') {
+    content = (
+      <>
+        <ChatInterface
+          repositories={repositories}
+          selectedRepositoryId={selectedRepositoryId}
+          onSelectRepository={setSelectedRepositoryId}
+          thread={thread}
+          querying={querying}
+          onQuery={handleQuery}
+          onIndexNew={() => {
+            setIndexError('');
+            setModalOpen(true);
+          }}
+        />
+        <IndexModal
+          open={modalOpen}
+          onClose={() => setModalOpen(false)}
+          onIndex={handleIndexRepository}
+          loading={indexing}
+          error={indexError}
+        />
+      </>
+    );
+  } else {
+    content = <OnboardingScreen onIndex={handleIndexRepository} loading={indexing} error={indexError} />;
+  }
+
   return (
     <div className="app-shell">
       <div className="backdrop-grid" aria-hidden="true" />
-      <main className="workspace">
-        <header className="hero">
-          <p className="eyebrow">GitLore</p>
-          <h1>Repository intelligence grounded in the original RAG pipeline.</h1>
-          <p className="hero-copy">
-            Index a public GitHub repository, preserve the original agentic workflow, and query the codebase
-            through a backend-driven web application.
-          </p>
-        </header>
-
-        {error && (
-          <div className="error-banner" role="alert">
-            {error}
-          </div>
-        )}
-
-        <section className="workspace-grid">
-          <div className="stack-lg">
-            <RepositoryForm onIndex={handleIndexRepository} loading={indexing} />
-            <RepositoryList
-              repositories={repositories}
-              selectedRepositoryId={selectedRepositoryId}
-              onSelect={setSelectedRepositoryId}
-            />
-          </div>
-
-          <div className="stack-lg">
-            <QueryInput
-              repositoryLabel={
-                selectedRepository
-                  ? `${selectedRepository.owner}/${selectedRepository.repo}`
-                  : ''
-              }
-              disabled={loadingRepositories || indexing || !selectedRepositoryId}
-              loading={querying}
-              onSubmit={handleQuery}
-            />
-            <AnswerDisplay result={result} loading={querying} />
-          </div>
-        </section>
-      </main>
+      {content}
     </div>
   );
 }

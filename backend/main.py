@@ -1,13 +1,17 @@
 import argparse
-
-from langchain_groq import ChatGroq
+import sys
 
 from backend.agent.agent import AgenticRagSystem
-from backend.config import config
 from backend.ingestion.ingestion_manager import IngestionManager
+from backend.llm import create_chat_model
 
 
 def main():
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
     parser = argparse.ArgumentParser(description="GitLore backend utility")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
@@ -25,11 +29,7 @@ def main():
         print(f"Indexed {manifest['repository_id']} with {manifest['stats']['chunks']} chunks")
         return
 
-    model = ChatGroq(
-        api_key=config.GROQ_API_KEY,
-        model=config.GROQ_MODEL,
-        temperature=config.GROQ_TEMPERATURE,
-    )
+    model = create_chat_model()
     result = AgenticRagSystem(model, args.repository_id).query(args.question)
     print(result["answer"])
 
